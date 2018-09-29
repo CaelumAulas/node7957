@@ -50,3 +50,16 @@ do JavaScript?
 ## Git para sobrevivência
 - https://guides.github.com/activities/hello-world/
 - https://www.udemy.com/git-e-github-para-iniciantes 
+
+
+## Comando Matador de portas:
+- kill $(lsof -t -i :3000)
+
+
+## Dicas do NPM
+- npm install: Varre o package.json procurando coisas para baixar
+- 
+
+
+## Dicas de Bancos de dados:
+- https://hipsters.tech/nosql-por-que-hipsters-22/
