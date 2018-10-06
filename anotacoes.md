@@ -27,6 +27,7 @@ do JavaScript?
     - Plataforma Node
         - https://github.com/v8/v8
         - https://github.com/libuv/libuv
+        - http://latentflip.com/loupe/?code=ZnVuY3Rpb24gc29tYShuMSxuMikgewogICAgcmV0dXJuIG4xICsgbjIKfQoKZnVuY3Rpb24gcmVxdWVzdChudW1lcm9Eb1JlcXVlc3QpIHsKICAgIGNvbnNvbGUubG9nKG51bWVyb0RvUmVxdWVzdCkKfQoKc2V0VGltZW91dChmdW5jdGlvbigpIHsKICAgIHJlcXVlc3QoMSkgICAgCn0sIDEwMDApCgpzZXRUaW1lb3V0KGZ1bmN0aW9uKCkgewogICAgcmVxdWVzdCgyKSAgICAKfSwgMTAwMDApCgpzZXRUaW1lb3V0KGZ1bmN0aW9uKCkgewogICAgcmVxdWVzdCgzKSAgICAKfSwgMTAwMCk%3D!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
 
 - Alternativa ao Java
     - Não seria um rival diretamente
@@ -39,13 +40,20 @@ do JavaScript?
 5 - Sempre resume a execução, depois faz um request da massa
 
 
-
-
+## Processamento de imagens:
+- Converte gifs para vídeos: https://github.com/discordapp/lilliput
+- Imagens em geral:
+    - Solução pra implementar: https://github.com/h2non/imaginary
+    - Solução as a service: https://cloudinary.com/
+    - Thumbor solução da globo.com: https://github.com/thumbor/thumbor
 
 ## Testes futuros:
 - https://autohotkey.com/
+    - https://www.casadocodigo.com.br/products/livro-oo-solid
 
-
+## Curiosidades:
+- Framework boladão cheio das coisa: https://adonisjs.com/
+- ORM: http://docs.sequelizejs.com/
 
 ## Git para sobrevivência
 - https://guides.github.com/activities/hello-world/
