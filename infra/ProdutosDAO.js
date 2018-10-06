@@ -4,10 +4,13 @@ class ProdutosDAO {
     }
     pegaTodos() {
         console.log('1 - pegaTodos()')
-        const connection = this.connection
-        return new Promise(function(resolve, reject) {
-            console.log('2 - dentro do new Promise')
-            connection.query('SELECT * FROM livros', function(err, result) {
+        // const connection = this.connection
+        return new Promise((resolve, reject) => {
+            console.log('2 - dentro do new Promise', this)
+            this.connection.query('SELECT * FROM livros', function(err, result) {
+                if(err) {
+                    reject(err)
+                }
                 console.log('3 - Dentro do cb do banco')
                 resolve(result)
             })
@@ -15,6 +18,16 @@ class ProdutosDAO {
     }
     pegaUmPorId(id, callback) {
         this.connection.query(`SELECT * FROM livros WHERE id = ${id}`, callback)
+    }
+
+    adicionar(produto) {
+        return new Promise((resolve, reject) => {
+            this.connection.query(`INSERT INTO livros SET ?`, produto, (err, result) => {
+                if(err) reject(err)
+
+                resolve(result)
+            })
+        })
     }
 }
 module.exports = ProdutosDAO

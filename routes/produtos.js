@@ -1,6 +1,19 @@
+
 module.exports = function(app) {
+    const connectionFactory = require('../infra/connectionFactory')
+    const connection = connectionFactory()
+
+    const ProdutosDAO = require('../infra/ProdutosDAO')
+    const produtosDAO = new ProdutosDAO(connection)
+
+    const ProdutosController = require('../controllers/produtos')
+    const produtosController = new ProdutosController(produtosDAO)
+    // http://dontpad.com/js35
+    app.get('/produtos/form', produtosController.formNovoProduto)
+    app.post('/produtos', produtosController.novoProduto)    
+
     // Criar a rota de /produtos para ca :)
-    app.get('/produtos', function(req,res)  {
+    app.get('/produtos', function(req,res, next)  {
         const connectionFactory = require('../infra/connectionFactory')
         const connection = connectionFactory()
         const ProdutosDAO = require('../infra/ProdutosDAO')
@@ -11,9 +24,21 @@ module.exports = function(app) {
             .then(function(result) {
                 console.log('4 - "then" dentro do produtos.js')
                 const livros = result
-                res.render('produtos/lista.ejs', { // View Model
-                    livros: livros
-                })    
+                res.format({
+                    html: () => {
+                        res.render('produtos/lista.ejs', { // View Model
+                            livros: livros
+                        })    
+                    },
+                    json: () => {
+                        res.send({
+                            livros: livros
+                        })
+                    }
+                })
+            })
+            .catch(function(erro) {
+                next(erro)
             })
     }) 
 

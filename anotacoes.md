@@ -71,3 +71,13 @@ do JavaScript?
 
 ## Dicas de Bancos de dados:
 - https://hipsters.tech/nosql-por-que-hipsters-22/
+
+
+## Dicas de APIs
+20x // Algo que deu certo
+30x // Algo relacionado a rede 
+40x // Ai é um erro conhecido 
+    400 erro sla
+    401 sem login sem dados
+    404 
+50x // cachorrinho no monitor 
