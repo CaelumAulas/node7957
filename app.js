@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false })) // parse application/x-www-f
 app.use(bodyParser.json())
 
 app.use(express.static('./public')) // Arquivos Estáticos
+
 // app.use(function(req,res) {
 //     const listaDeArquivos = varreDiretorio
 //     listaDeArquivos.forEach(function(file) {

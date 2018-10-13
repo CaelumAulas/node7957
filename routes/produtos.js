@@ -14,6 +14,8 @@ module.exports = function(app) {
 
     // Criar a rota de /produtos para ca :)
     app.get('/produtos', function(req,res, next)  {
+        res.header('Access-Control-Allow-Origin', '*')
+
         const connectionFactory = require('../infra/connectionFactory')
         const connection = connectionFactory()
         const ProdutosDAO = require('../infra/ProdutosDAO')

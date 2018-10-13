@@ -7,7 +7,6 @@ const produtoSchema = Joi.object().keys({
 
 class ProdutosController {
     constructor (produtosDAO) {
-        console.log(produtosDAO)
         this.produtosDAO = produtosDAO
         this.novoProduto = this.novoProduto.bind(this)
     }

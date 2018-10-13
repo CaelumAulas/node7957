@@ -6,7 +6,7 @@ class ProdutosDAO {
         console.log('1 - pegaTodos()')
         // const connection = this.connection
         return new Promise((resolve, reject) => {
-            console.log('2 - dentro do new Promise', this)
+            console.log('2 - dentro do new Promise')
             this.connection.query('SELECT * FROM livros', function(err, result) {
                 if(err) {
                     reject(err)
